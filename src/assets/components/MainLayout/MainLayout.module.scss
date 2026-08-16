@@ -1,0 +1,36 @@
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  height: 100dvh;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  flex-grow: 1;
+
+  height: 100%;
+
+  overflow-y: auto;
+}
+
+.main {
+  padding: 0 20px;
+}
+
+.footer {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 10px;
+
+  background-color: transparent;
+  font-size: 15px;
+  color: var(--text-color);
+  text-align: center;
+}

@@ -1,0 +1,37 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --main-bg-color: #23272f;
+  --text-color: #FFFF;
+  --font-family: 'Poppins',sans-serif;
+
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: var(--text-color);
+
+  background-color: var(--main-bg-color);
+}
+
+a {
+  color: inherit;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg-color: #FFF;
+    --text-color: #000;
+   
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #23272f;
+    --text-color: #FFFF;
+  }
+}
