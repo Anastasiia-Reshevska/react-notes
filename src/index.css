@@ -1,37 +1,35 @@
 @import "normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "palette.scss";
+@import "variables.scss";
 
-:root {
-  --main-bg-color: #23272f;
-  --text-color: #FFFF;
-  --font-family: 'Poppins',sans-serif;
-
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  color: var(--text-color);
-
-  background-color: var(--main-bg-color);
-}
 
 a {
   color: inherit;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    --main-bg-color: #FFF;
-    --text-color: #000;
-   
+    --palette-bg-main: var(--palette-card-bg-color-light);
+    --palette-text-main: var(--palette-text-secondary);
+    --palette-button-bg: var(--palette-button-light);
+    --palette-button-text-color: var(--palette-button-text-color-light);
+    --palette-card-bg-color: var(--palette-card-bg-color-light);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg-color: #23272f;
-    --text-color: #FFFF;
+    --palette-bg-main: var(--palette-bg-main);
+    --palette-text-main: var(--palette-text-main);
+    --palette-button-bg: var(--palette-button-bg-dark);
+    --palette-button-text-color: var( --palette-button-text-color-light);
+    --palette-card-bg-color: var(--palette-card-bg-color-dark);
   }
 }

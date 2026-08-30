@@ -1,17 +1,21 @@
 import { Outlet } from 'react-router-dom';
 import cls from './MainLayout.module.scss';
+import { Header } from '../Header';
+import { Container } from '../Container';
 
 export const MainLayout = () => {
   const currentYear = new Date().getFullYear()
   return (
     <div className={cls.mainLayout}>
-      ggggg
       <div className={cls.mainWrapper}>
+        <Header />
         <main className={cls.main}>
-          <Outlet />
+          <Container className={cls.mainContainer}>
+            <Outlet />
+          </Container>
         </main>
         <footer className={cls.footer}>
-          React Question Cards Application {currentYear} <br />
+          React Question Notes Application {currentYear} <br />
           by Anastasiia Reshevska
         </footer>
       </div>
@@ -19,4 +23,4 @@ export const MainLayout = () => {
   );
 }
 
-export default MainLayout
+export default MainLayout;
