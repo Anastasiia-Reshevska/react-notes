@@ -11,37 +11,12 @@
 .mainWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 1;
   gap: 20px;
 
   height: 100%;
-  flex-grow: 1;
 
   overflow-y: auto;
-}
-
-.mainContainer {
-  display: grid;
-  justify-items: center;
-  gap: 30px;
-
-  margin: 20px 0;
-  padding: 0 20px;
-
-  @media (min-width: $xs-up) {
-    gap: 40px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: $sm-up) {
-    gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (min-width: $lg-up) {
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 
 .footer {
@@ -50,6 +25,7 @@
   justify-content: center;
 
   width: 100%;
+  margin-top: auto;
   padding: 15px 10px;
 
   text-align: center;

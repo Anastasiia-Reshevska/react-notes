@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import ReactLogo from '../../images/react-logo.svg';
+import ReactLogo from '../../assets/images/react-logo.svg';
 import { Button } from '../Button';
 import { Container } from '../Container';
 import cls from './Header.module.scss';

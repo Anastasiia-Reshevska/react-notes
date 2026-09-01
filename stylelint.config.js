@@ -22,6 +22,7 @@ export default {
             'flex',
             'flex-direction',
             'flex-wrap',
+            'flex-grow',
             'align-items',
             'align-content',
             'justify-content',

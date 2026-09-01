@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { MainLayout } from './assets/components/MainLayout';
-import { HomePage } from './assets/pages/HomePage';
-import { NotFoundPage } from './assets/pages/NotFoundPage';
+import { MainLayout } from './components/MainLayout';
+import { HomePage } from './pages/HomePage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
   return (

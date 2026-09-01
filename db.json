@@ -9,7 +9,7 @@
         "https://react.dev/"
       ],
       "level": 1,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -32,8 +32,8 @@
       "resources": [
         "https://react.dev/learn/writing-markup-with-jsx"
       ],
-      "level": 1,
-      "completed": false,
+      "level": 3,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -45,7 +45,7 @@
         "https://react.dev/learn/passing-props-to-a-component"
       ],
       "level": 1,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -57,7 +57,7 @@
         "https://react.dev/learn/state-a-components-memory"
       ],
       "level": 1,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -80,8 +80,8 @@
       "resources": [
         "https://react.dev/reference/react/useEffect"
       ],
-      "level": 1,
-      "completed": false,
+      "level": 2,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -104,7 +104,7 @@
       "resources": [
         "https://react.dev/learn/rendering-lists"
       ],
-      "level": 1,
+      "level": 4,
       "completed": false,
       "editDate": "03.02.2025, 19:49"
     },
@@ -117,7 +117,7 @@
         "https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key"
       ],
       "level": 1,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -141,7 +141,7 @@
         "https://react.dev/learn/sharing-state-between-components"
       ],
       "level": 2,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -177,7 +177,7 @@
         "https://react.dev/reference/react/useMemo"
       ],
       "level": 2,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -201,7 +201,7 @@
         "https://react.dev/learn/passing-data-deeply-with-context"
       ],
       "level": 2,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -225,7 +225,7 @@
         "https://react.dev/learn/passing-data-deeply-with-context"
       ],
       "level": 2,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -249,7 +249,7 @@
         "https://react.dev/learn/render-and-commit"
       ],
       "level": 3,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -285,7 +285,7 @@
         "https://react.dev/learn/reusing-logic-with-custom-hooks"
       ],
       "level": 3,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -321,7 +321,7 @@
         "https://react.dev/reference/react/Suspense"
       ],
       "level": 3,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {
@@ -345,7 +345,7 @@
         "https://react.dev/reference/react/useTransition"
       ],
       "level": 4,
-      "completed": false,
+      "completed": true,
       "editDate": "03.02.2025, 19:49"
     },
     {

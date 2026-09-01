@@ -1,0 +1,63 @@
+.wrapper {
+  z-index: 10;
+
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0 , 0.4);
+}
+
+.loader {
+  --color-1: var(--palette-button-text-color-light);
+  --color-2: var(--palette-button-bg-dark);
+  --color-3: var(--palette-button-state-color);
+  --size: 1px;
+
+  position: relative;
+  transform: rotateX(65deg) rotate(45deg);
+
+  display: block;
+
+  width: calc(48 * var(--size));
+  height: calc(48 * var(--size));
+
+  color: var(--color-2);
+  background: var(--color-1);
+
+  animation: layers1 1s linear infinite alternate;
+
+  &:after {
+    position: absolute;
+    inset: 0;
+
+    background: var(--color-3);
+
+    animation: layerTr 1s linear infinite alternate;
+    content: '';
+  }
+}
+
+@keyframes layers1 {
+  0% {
+    box-shadow: 0 0 0 0;
+  }
+
+  90%,
+  100% {
+    box-shadow: calc(20 * var(--size)) calc(20 * var(--size)) 0 calc(-4 * var(--size));
+  }
+}
+
+@keyframes layerTr {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(calc(-25 * var(--size)), calc(-25 * var(--size))) scale(1);
+  }
+}
