@@ -1,0 +1,64 @@
+.form,
+.formControl,
+.clearFormControl {
+  display: flex;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.form {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+
+  padding: 20px 15px;
+
+  border: 1px solid var(--palette-button-bg-dark);
+  border-radius: 15px;
+}
+
+.formControl {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+
+  label {
+    font-size: 18px;
+
+    color: var(--palette-text-main);
+  }
+
+  select,
+  textarea {
+    padding: 5px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    outline: none;
+  }
+
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--palette-checkbox-bg);
+  }
+}
+
+.clearFormControl {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--palette-checkbox-bg);
+
+  &:disabled+span {
+    opacity: .5;
+  }
+}

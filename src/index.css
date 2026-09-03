@@ -18,7 +18,7 @@ a {
   :root {
     --palette-bg-main: var(--palette-card-bg-color-light);
     --palette-text-main: var(--palette-text-secondary);
-    --palette-button-bg: var(--palette-button-light);
+    --palette-button-bg: var(--palette-button-bg-dark);
     --palette-button-text-color: var(--palette-button-text-color-light);
     --palette-card-bg-color: var(--palette-card-bg-color-light);
   }
@@ -29,7 +29,7 @@ a {
     --palette-bg-main: var(--palette-bg-main);
     --palette-text-main: var(--palette-text-main);
     --palette-button-bg: var(--palette-button-bg-dark);
-    --palette-button-text-color: var( --palette-button-text-color-light);
+    --palette-button-text-color: var(--palette-button-text-color-light);
     --palette-card-bg-color: var(--palette-card-bg-color-dark);
   }
 }

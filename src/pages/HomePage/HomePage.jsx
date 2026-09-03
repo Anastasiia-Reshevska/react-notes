@@ -12,9 +12,7 @@ import cls from '../HomePage/HomePage.module.scss';
 const DEFAULT_PER_PAGE = 10;
 
 export const HomePage = () => {
-  const [searchParams, setSearchParams] = useState(
-    `_page=1&_per_page=${DEFAULT_PER_PAGE}`,
-  );
+  const [searchParams, setSearchParams] = useState(`_page=1&_per_page=${DEFAULT_PER_PAGE}`);
   const [questions, setQuestions] = useState({});
   const [searchValue, setSearchValue] = useState('');
   const [sortSelectValue, setSortSelectValue] = useState('');

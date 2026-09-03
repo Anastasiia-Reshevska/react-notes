@@ -1,0 +1,104 @@
+import { useActionState } from 'react';
+import { Button } from '../Button';
+import { Loader } from '../Loader';
+import cls from './Form.module.scss';
+
+export const Form = ({
+  action,
+  nameQuestion,
+  nameAnswer,
+  nameDescription,
+  nameResources,
+  nameLevel,
+  idAnswer,
+  idQuestion,
+  idDescription,
+  idResources,
+  idLevel,
+  colsField,
+  rowsField,
+  placeholderQuestion,
+  placeholderAnswer,
+  placeholderDescription,
+  placeholderResources,
+  rowsDecription,
+}) => {
+  const [formState, formAction, isPending] = useActionState(action, {
+    clearForm: true,
+  });
+
+  return (
+    <>
+      {isPending && <Loader />}
+      <form action={formAction} className={cls.form}>
+        <div className={cls.formControl}>
+          <label htmlFor={idQuestion}>Question: </label>
+          <textarea
+            defaultValue={formState.question}
+            name={nameQuestion}
+            id={idQuestion}
+            cols={colsField}
+            rows={rowsField}
+            required
+            placeholder={placeholderQuestion}
+          />
+        </div>
+        <div className={cls.formControl}>
+          <label htmlFor={idAnswer}>Short answer: </label>
+          <textarea
+            defaultValue={formState.answer}
+            name={nameAnswer}
+            id={idAnswer}
+            cols={colsField}
+            rows={rowsField}
+            required
+            placeholder={placeholderAnswer}
+          />
+        </div>
+        <div className={cls.formControl}>
+          <label htmlFor={idDescription}>Description: </label>
+          <textarea
+            defaultValue={formState.description}
+            name={nameDescription}
+            id={idDescription}
+            cols={colsField}
+            rows={rowsDecription}
+            required
+            placeholder={placeholderDescription}
+          />
+        </div>
+        <div className={cls.formControl}>
+          <label htmlFor={idResources}>Resources: </label>
+          <textarea
+            defaultValue={formState.resources}
+            name={nameResources}
+            id={idResources}
+            cols={colsField}
+            rows={rowsDecription}
+            placeholder={placeholderResources}
+          />
+        </div>
+        <div className={cls.formControl}>
+          <label htmlFor={idLevel}>Level: </label>
+          <select id={idLevel} name={nameLevel} defaultValue={formState.level}>
+            <option disabled>Question level</option>
+            <option value="1">1 - easiest</option>
+            <option value="2">2 - medium</option>
+            <option value="3">3 - hardest</option>
+          </select>
+          <label htmlFor="clearFormField" className={cls.clearFormControl}>
+            <input
+              type="checkbox"
+              id="clearFormField"
+              defaultChecked={formState.clearForm}
+              name="clearForm"
+              className={cls.checkbox}
+            />
+            <span>clear form after submitting?</span>
+          </label>
+        </div>
+        <Button isDisabled={isPending}>Add question</Button>
+      </form>
+    </>
+  );
+};

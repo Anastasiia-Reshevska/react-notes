@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MainLayout } from './components/MainLayout';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { QuestionPage } from './pages/QuestionPage';
+import { AddQuestionPage } from './pages/AddQuestionPage';
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
             path="/forbidden"
             element={<div>forbidden component 👋</div>}
           />
-          <Route path="/addquestion" element={<div>add question</div>} />
-          <Route path="/question/:id" element={<div>add question</div>} />
-          <Route path="*" element={<NotFoundPage/>} />
+          <Route path="/addquestion" element={<AddQuestionPage />} />
+          <Route path="/question/:id" element={<QuestionPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
