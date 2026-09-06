@@ -5,6 +5,7 @@ export default {
     'order/properties-order': [
       [
         'z-index',
+        'content',
 
         {
           emptyLineBefore: 'always',

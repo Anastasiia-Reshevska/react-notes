@@ -3,6 +3,8 @@ import cls from './MainLayout.module.scss';
 import { Header } from '../Header';
 import { Container } from '../Container';
 import { ToastContainer } from 'react-toastify';
+import { Suspense } from 'react';
+import { Loader } from '../Loader';
 
 export const MainLayout = () => {
   const currentYear = new Date().getFullYear()
@@ -13,7 +15,9 @@ export const MainLayout = () => {
           <Header />
           <main className={cls.main}>
             <Container className={cls.mainContainer}>
-              <Outlet />
+              <Suspense fallback={<Loader/>}>
+                <Outlet />
+              </Suspense>
             </Container>
           </main>
           <footer className={cls.footer}>

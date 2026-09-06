@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 import { delayFn } from '../../helpers/delayFn';
-import { Form } from '../../components/Form';
+import { QuestionForm } from '../../components/QuestionForm';
 import { API_URL } from '../../constants';
 import cls from './AddQuestionPage.module.scss';
 
@@ -44,13 +44,15 @@ const createCardAction = async (prevState, formData) => {
     return prevState;
   }
 };
-export const AddQuestionPage = () => {
+const AddQuestionPage = () => {
   return (
     <>
       <h1 className={cls.formTitle}>Add new question</h1>
       <div className={cls.formContainer}>
-        <Form
+        <QuestionForm
           action={createCardAction}
+          submitBtnText="Add question"
+          clearForm={true}
           nameQuestion="question"
           nameAnswer="answer"
           nameDescription="description"
@@ -63,7 +65,7 @@ export const AddQuestionPage = () => {
           idLevel="levelField"
           colsField="30"
           rowsField="2"
-          rowsDecription="5"
+          rowsDescription="5"
           placeholderQuestion="please enter a question"
           placeholderAnswer="please enter a short answer"
           placeholderDescription="please enter a full description"
@@ -73,3 +75,5 @@ export const AddQuestionPage = () => {
     </>
   );
 };
+
+export default AddQuestionPage;

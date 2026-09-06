@@ -31,13 +31,14 @@
   animation: layers1 1s linear infinite alternate;
 
   &:after {
+    content: '';
+
     position: absolute;
     inset: 0;
 
     background: var(--color-3);
 
     animation: layerTr 1s linear infinite alternate;
-    content: '';
   }
 }
 

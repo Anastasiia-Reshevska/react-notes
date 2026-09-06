@@ -1,10 +1,12 @@
-import { useActionState } from 'react';
+import { useActionState, useEffect } from 'react';
 import { Button } from '../Button';
 import { Loader } from '../Loader';
-import cls from './Form.module.scss';
+import cls from './QuestionForm.module.scss';
 
-export const Form = ({
+export const QuestionForm = ({
   action,
+  submitBtnText,
+  clearForm,
   nameQuestion,
   nameAnswer,
   nameDescription,
@@ -21,16 +23,29 @@ export const Form = ({
   placeholderAnswer,
   placeholderDescription,
   placeholderResources,
-  rowsDecription,
+  rowsDescription,
+  initialState = {},
+  onPendingChange,
 }) => {
   const [formState, formAction, isPending] = useActionState(action, {
-    clearForm: true,
+    ...initialState,
+    clearForm,
   });
+
+  useEffect(() => {
+    onPendingChange?.(isPending);
+  }, [isPending, onPendingChange]);
 
   return (
     <>
       {isPending && <Loader />}
       <form action={formAction} className={cls.form}>
+        <input
+          type="text"
+          name="questionId"
+          defaultValue={formState.id}
+          hidden
+        />
         <div className={cls.formControl}>
           <label htmlFor={idQuestion}>Question: </label>
           <textarea
@@ -62,7 +77,7 @@ export const Form = ({
             name={nameDescription}
             id={idDescription}
             cols={colsField}
-            rows={rowsDecription}
+            rows={rowsDescription}
             required
             placeholder={placeholderDescription}
           />
@@ -74,7 +89,7 @@ export const Form = ({
             name={nameResources}
             id={idResources}
             cols={colsField}
-            rows={rowsDecription}
+            rows={rowsDescription}
             placeholder={placeholderResources}
           />
         </div>
@@ -97,7 +112,7 @@ export const Form = ({
             <span>clear form after submitting?</span>
           </label>
         </div>
-        <Button isDisabled={isPending}>Add question</Button>
+        <Button isDisabled={isPending}>{submitBtnText}</Button>
       </form>
     </>
   );
