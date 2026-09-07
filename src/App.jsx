@@ -4,7 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { QuestionPage } from './pages/QuestionPage';
 import { AddQuestionPageLazy } from './pages/AddQuestionPage';
-import { EditQuestionPage } from './pages/EditQuestionPage';
+import { EditQuestionPageLazy } from './pages/EditQuestionPage';
 import { ForbiddenPage } from './pages/ForbiddenPage';
 import { AuthProvider } from './auth/AuthProvider';
 import { useAuth } from './hooks/useAuth';
@@ -12,7 +12,7 @@ import { useAuth } from './hooks/useAuth';
 const ProtectedRoutes = () => {
   const { isAuth } = useAuth();
   const location = useLocation();
-  
+
   return isAuth ? <Outlet /> : <Navigate to="/forbidden" state={{ from: location.pathname }} replace />;
 }
 
@@ -27,7 +27,7 @@ function App() {
             <Route path="/question/:id" element={<QuestionPage />} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/addquestion" element={<AddQuestionPageLazy />} />
-              <Route path="/editquestion/:id" element={<EditQuestionPage />} />
+              <Route path="/editquestion/:id" element={<EditQuestionPageLazy />} />
             </Route>
             <Route path="*" element={<NotFoundPage />} />
           </Route>

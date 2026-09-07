@@ -11,7 +11,7 @@ import { API_URL } from '../../constants';
 
 import cls from './EditQuestionPage.module.scss';
 
-export const EditQuestionPage = () => {
+const EditQuestionPage = () => {
   const { id } = useParams();
 
   const [question, setQuestion] = useState(null);
@@ -35,3 +35,5 @@ export const EditQuestionPage = () => {
     </>
   );
 };
+
+export default EditQuestionPage
