@@ -1,13 +1,15 @@
 :root {
-  --palette-text-main: #fff;
+  --palette-text-main: #FFFF;
   --palette-text-secondary: #000;
+  --palette-text-main-light: var(--palette-text-secondary);
+  --palette-text-main-dark: #fff;
 
   --palette-bg-main: #23272f;
+  --palette-bg-main-light: var(--palette-text-main-dark);
+  --palette-bg-main-dark: #23272f;
 
   --palette-button-bg-light: #4f5359;
-
   --palette-button-bg-dark: #16444f;
-
   --palette-button-state-color: #2f2f2f;
   --palette-button-text-color-light: #57c4dc;
 

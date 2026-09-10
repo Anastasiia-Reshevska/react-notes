@@ -5,8 +5,6 @@
   height: 40px;
 
   border-radius: 20px;
-
-  background-color: var(--palette-card-bg-color);
 }
 
 .searchIcon {
@@ -21,10 +19,12 @@
   padding: 12px 12px 12px 45px;
 
   border: none;
+  border-radius: 15px;
 
   font-size: 16px;
 
   color: var(--palette-text-main);
-  background-color: transparent;
+  background-color: var(--palette-card-bg-color);
   outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

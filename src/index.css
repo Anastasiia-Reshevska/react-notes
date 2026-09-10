@@ -3,7 +3,6 @@
 @import "palette.scss";
 @import "variables.scss";
 
-
 a {
   color: inherit;
 }
@@ -14,22 +13,25 @@ a {
   box-sizing: border-box;
 }
 
+body {
+  color: var(--palette-text-main);
+  background: var(--palette-bg-main);
+}
+
+.darkLayout {
+  --palette-bg-main: var(--palette-bg-main-dark);
+  --palette-text-main: var(--palette-text-main-dark);
+  --palette-button-bg: var(--palette-button-bg-dark);
+  --palette-button-text-color: var(--palette-button-text-color-dark);
+  --palette-card-bg-color: var(--palette-card-bg-color-dark);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    --palette-bg-main: var(--palette-card-bg-color-light);
-    --palette-text-main: var(--palette-text-secondary);
+    --palette-bg-main: var(--palette-bg-main-light);
+    --palette-text-main: var(--palette-text-main-light);
     --palette-button-bg: var(--palette-button-bg-dark);
     --palette-button-text-color: var(--palette-button-text-color-light);
     --palette-card-bg-color: var(--palette-card-bg-color-light);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --palette-bg-main: var(--palette-bg-main);
-    --palette-text-main: var(--palette-text-main);
-    --palette-button-bg: var(--palette-button-bg-dark);
-    --palette-button-text-color: var(--palette-button-text-color-light);
-    --palette-card-bg-color: var(--palette-card-bg-color-dark);
   }
 }
