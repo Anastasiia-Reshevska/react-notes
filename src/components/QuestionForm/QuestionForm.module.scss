@@ -14,10 +14,11 @@
 
   padding: 20px 15px;
 
-  border: 1px solid var(--palette-button-bg-dark);
   border-radius: 15px;
 
   background-color: var(--palette-card-bg-color);
+
+  box-shadow: 0 0 8px 0 rgb(0%, 0%, 0.0392156863%);
 }
 
 .formControl {
