@@ -13,7 +13,7 @@ const DEFAULT_PER_PAGE = 10;
 
 export const HomePage = () => {
   const [searchParams, setSearchParams] = useState(`_page=1&_per_page=${DEFAULT_PER_PAGE}`);
-  const [questions, setQuestions] = useState({});
+  const [questions, setQuestions] = useState(null);
   const [searchValue, setSearchValue] = useState('');
   const [sortSelectValue, setSortSelectValue] = useState('');
   const [countSelectValue, setCountSelectValue] = useState('');
@@ -21,10 +21,13 @@ export const HomePage = () => {
   const controlsContainerRef = useRef();
 
   const getActivePageNumber = () =>
-    questions.next === null ? questions.last : questions.next - 1;
+    questions?.next === null ? questions.last : questions.next - 1;
 
   const [getQuestions, isLoading, error] = useFetch(async (url) => {
     const response = await fetch(`${API_URL}/${url}`);
+    if (!response.ok) {
+      throw new Error(`Failed to load notes (${response.status})`);
+    }
     const questions = await response.json();
 
     setQuestions(questions);
@@ -89,7 +92,7 @@ export const HomePage = () => {
 
       <QuestionCardList cards={cards} />
 
-      {!isLoading && cards.length === 0 ? (
+      {!isLoading && !error && questions && cards.length === 0 ? (
         <p className={cls.noCardsInfo}>No notes...</p>
       ) : (
         questions?.pages > 1 && (

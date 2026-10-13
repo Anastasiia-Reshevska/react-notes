@@ -9,8 +9,6 @@ import { Loader } from '../../components/Loader';
 
 import { API_URL } from '../../constants';
 
-import cls from './EditQuestionPage.module.scss';
-
 const EditQuestionPage = () => {
   const { id } = useParams();
 

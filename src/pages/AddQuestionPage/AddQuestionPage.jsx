@@ -13,6 +13,7 @@ const createCardAction = async (prevState, formData) => {
 
     const response = await fetch(`${API_URL}/react`, {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         question: newItem.question,
         answer: newItem.answer,
@@ -20,7 +21,6 @@ const createCardAction = async (prevState, formData) => {
         resources: newResources.length ? newResources.split(',') : [],
         level: Number(newItem.level),
         completed: false,
-        editDate: undefined,
       }),
     });
 

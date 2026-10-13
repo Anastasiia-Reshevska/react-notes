@@ -22,6 +22,7 @@ export const EditQuestion = ({ question }) => {
 
       const response = await fetch(`${API_URL}/react/${questionId}`, {
         method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           question: newItem.question,
           answer: newItem.answer,
@@ -64,7 +65,7 @@ export const EditQuestion = ({ question }) => {
   });
 
   const onRemoveQuestionHandler = (questionId) => {
-    const isRemove = confirm('Are you sure');
+    const isRemove = confirm('Delete the record? Are you sure?');
     isRemove && removeQuestion(questionId);
   };
 

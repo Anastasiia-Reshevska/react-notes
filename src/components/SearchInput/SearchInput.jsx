@@ -6,12 +6,12 @@ export const SearchInput = ({ value, onChange }) => {
   const idInput = useId();
   return (
     <div className={cls.inputContainer}>
-      <label htmlFor={useId}>
+      <label htmlFor={idInput}>
         <SearchIcon className={cls.searchIcon} />
       </label>
       <input
         type="text"
-        id={useId}
+        id={idInput}
         className={cls.input}
         placeholder="search..."
         value={value}

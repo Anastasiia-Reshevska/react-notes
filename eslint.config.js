@@ -8,6 +8,10 @@ import prettier from 'eslint-plugin-prettier'
 export default [
   { ignores: ['dist'] },
   {
+    files: ['backend/**/*.js'],
+    languageOptions: { globals: globals.node },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,

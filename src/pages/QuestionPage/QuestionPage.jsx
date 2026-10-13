@@ -27,30 +27,32 @@ export const QuestionPage = () => {
     }
 
     setCard(question);
+    setIsChecked(question.completed);
   });
 
   const [updateCard, isCardUpdating] = useFetch(async (isChecked) => {
     const response = await fetch(`${API_URL}/react/${id}`, {
       method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         completed: isChecked,
       }),
     });
 
+    if (!response.ok) {
+      throw new Error(`Failed to update question (${response.status})`);
+    }
+
     const question = await response.json();
     setCard(question);
+    setIsChecked(question.completed);
   });
-
-  useEffect(() => {
-    card !== null && setIsChecked(card.completed);
-  }, [card]);
 
   useEffect(() => {
     fetchCard();
   }, [id]);
 
   const onCheckboxChangeHandler = () => {
-    setIsChecked(!isChecked);
     updateCard(!isChecked);
   };
 

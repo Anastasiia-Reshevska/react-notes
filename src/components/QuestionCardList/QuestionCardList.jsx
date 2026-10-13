@@ -2,7 +2,7 @@ import { memo } from 'react';
 import cls from './QuestionCardList.module.scss';
 import { QuestionCard } from '../QuestionCard';
 
-export const QuestionCardList = memo(({ cards, error }) => {
+export const QuestionCardList = memo(({ cards }) => {
   return (
     <div className={cls.cardList}>
       {cards.map((card, index) => {
